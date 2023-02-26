@@ -16,6 +16,7 @@
   
   .nav > .nav-header {
     display: inline;
+    margin-left: 10px;
   }
   
   .nav > .nav-header > .nav-title {
@@ -33,6 +34,7 @@
     display: inline;
     float: right;
     font-size: 18px;
+    margin-right: 100px;
   }
   
   .nav > .nav-links > a {
@@ -76,7 +78,8 @@
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #333;
+      background-color: #ffffff;
+      opacity:.4;
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;
@@ -85,7 +88,14 @@
     }
     .nav > .nav-links > a {
       display: block;
+      color: black;
       width: 100%;
+    }
+    .nav > .nav-links > a:hover {
+      display: block;
+      color: black;
+      width: 100%;
+      opacity: -.4;
     }
     .nav > #nav-check:not(:checked) ~ .nav-links {
       height: 0px;
@@ -95,3 +105,25 @@
       overflow-y: auto;
     }
   }
+  .first-txt{
+      position: absolute;
+      left: 450px;
+      top:280px;
+      color:black;
+  }
+  .changesImgOnHover:hover img {
+    opacity: .4;
+}
+.changesImgOnHover:hover .first-txt {
+    color:black;
+    font-size: 30px;
+}
+.column {
+  float: left;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  display: flex;
+}
